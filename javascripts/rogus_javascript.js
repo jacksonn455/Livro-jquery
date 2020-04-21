@@ -53,7 +53,7 @@ function calculateTotalProducts() {
 	var produtos = document.getElementsByClassName("produto");
 	var totalProdutos = 0;
 
-	for (var pos = 0; pos < produtos.length; pos++) { // cria um laço de repetição para pegar os valores das <tr>
+	for (var pos = 0; pos < produtos.length; pos++) { // cria um laço de repetição para pegar os elementos da tabela
 		var priceElements = produtos[pos].getElementsByClassName("price"); // pega o valor de cada elemento e armazena em um array
 		var priceText = priceElements[0].innerHTML;
 		var price = moneyTextToFloat(priceText); // pega o valor dos preços

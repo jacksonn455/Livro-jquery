@@ -66,6 +66,18 @@ function calculateTotalProducts() {
 		totalProdutos += subtotal;
 	}
 	return totalProdutos;
-	console.log(totalProdutos);
 }
 
+
+function quantidadeMudou() {
+	writeTotal(calculateTotalProducts());  // altera o valor do total
+}
+
+function onDocumentLoad() {
+	var textEdits = document.getElementsByClassName("quantity");
+	for (var i = 0; i < textEdits.length; i++) {
+		textEdits[i].onchange = quantidadeMudou();
+	}
+}
+
+window.onload = onDocumentLoad();  // carregamento da pagina

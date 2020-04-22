@@ -10,7 +10,7 @@ $(function () {
   }
 
 
-  function onTarefaItemClick(){
+  function onTarefaItemClick(){ // altera a tarefa
 
     if(!$(this).is($lastClicked)) {
       if($lastClicked !== undefined) {
@@ -30,6 +30,7 @@ $(function () {
     }
   
   }
+
   function onTarefaKeydown(event) {
     if(event.which === 13) {
       addTarefa($("#tarefa").val());

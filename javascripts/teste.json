@@ -1,0 +1,24 @@
+{
+    "autor": "Plínio Balduino",
+    "titulo": "Dominando JavaScript com jQuery",
+    "ano": 2013,
+    "editora": "Casa do Código",
+    "usa_drm": false,
+    "capitulos": [
+        "Apresentação",
+        "Refazendo uma loja virtual",
+        "Adicionando JavaScript",
+        "Um JavaScript diferente em cada navegador",
+        "Simplifique com jQuery"
+    ]
+}
+
+
+/*
+
+É possível também montar um objeto do lado direito, pressionar o botão com
+a seta para o lado esquerdo e ver o código JSON
+
+https://jsoneditoronline.org/#left=local.vojeri&right=local.vadobu
+
+*/

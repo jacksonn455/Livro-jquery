@@ -48,4 +48,24 @@ function calculateTotalProducts() {
 		total += quantity * price; // calcula o valor total
 	});
 	return total;
+	console.log(total);
 }
+
+$(document).ready(function () {
+	$(".quantity").change(function () {
+		writeTotal(calculateTotalProducts());
+	});
+}); // altera valor quando altera a quantidade
+
+function quantidadeMudou() {
+	writeTotal(calculateTotalProducts());  // altera o valor do total
+}
+
+function onDocumentLoad() {
+	var textEdits = document.getElementsByClassName("quantity");
+	for (var i = 0; i < textEdits.length; i++) {
+		textEdits[i].onchange = quantidadeMudou();
+	}
+}
+
+window.onload = onDocumentLoad();

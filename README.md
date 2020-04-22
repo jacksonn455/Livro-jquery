@@ -6,4 +6,4 @@ jQuery
 --------------------
  ![](https://github.com/jacksonn455/loja-jquery/blob/master/imagem.png)
 --------------------
-
+ ![](https://github.com/jacksonn455/loja-jquery/blob/master/capa.png)

@@ -36,6 +36,10 @@ div.todo h2 {
 	width: 33em;
 }
 
+.tarefa-id {
+	visibility: hidden;
+	}
+
 .tarefa-edit {
 	width: 31em;
 }

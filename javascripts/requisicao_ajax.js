@@ -74,7 +74,7 @@ function onCepDone(data) {
 $.getJSON(servico + cep)   // comando no console
     .done(onCepDone);
 
-// usar com erro
+// usar caso tenha algum erro
 
 var servico = "http://api.postmon.com.br/v1/cep/";
 var cep = "12345-789";

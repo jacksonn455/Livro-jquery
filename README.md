@@ -1,8 +1,7 @@
 jQuery
 ===============================================
 
-- Exercicios baseados no livro "Dominando javascript com jQuery" da Casa do Código.
-
+Exercicios baseados no livro "Dominando javascript com jQuery" da Casa do Código.
 --------------------
 
 - Refazendo uma loja virtual

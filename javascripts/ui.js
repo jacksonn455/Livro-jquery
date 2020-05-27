@@ -1,8 +1,10 @@
+// Sanfona
 $(function () {
     $("#accordion").accordion();
 });
 
-var linguagens = [  // Utilizar para dar dicas de auto complete
+// Auto complete
+var linguagens = [
     "Clojure",
     "Common LISP",
     "Erlang",
@@ -17,10 +19,12 @@ var linguagens = [  // Utilizar para dar dicas de auto complete
 
 $("#linguagens").autocomplete({ source: linguagens });
 
+// Botao
 $(function () {
     $(".chique").button();
 });
 
+// Calendario
 $(function () {
     $("#nascimento").datepicker({
         showWeek: true,
@@ -63,4 +67,23 @@ $(function () {
         closeText: "Fechar",
         weekHeader: "#"
     });
-});    
+});
+
+// Notificação de Alerta de dialogo
+$(function () {
+    function onSimClick() {
+        alert("Uhu! Você escolheu 'Sim'!");
+        $(this).dialog("close");
+    };
+    function onClaroClick() {
+        alert("\\o/");
+        $(this).dialog("close");
+    };
+    var opcoes = {
+        buttons: {
+            "Sim": onSimClick,
+            "Claro!": onClaroClick
+        }
+    };
+    $("#dialog").dialog(opcoes);
+});

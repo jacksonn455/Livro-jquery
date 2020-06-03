@@ -51,6 +51,7 @@ function OlaSimples(seuNome) {
 simples = new OlaSimples("Plínio");
 simples.oi();
 
+// ---------------------------------------------------------------------------------------------------------------------
 
 // Maneira certa de encapsulamento para criar objetos atraves de função
 function Funcionario(nome, cargo, salario) {
@@ -72,6 +73,7 @@ Funcionario.prototype.cargo = "<sem cargo>";
 Funcionario.prototype.salario = NaN;
 console.log(paulo.nome, paulo.cargo, paulo.salario); // agora foi definido os elementos
 
+// ---------------------------------------------------------------------------------------------------------------------
 
 // Lista
 function capitalize(list) {
@@ -95,6 +97,8 @@ Array.prototype.capitalize = function () {
     }
     return resultado;
 }
+
+// ---------------------------------------------------------------------------------------------------------------------
 
 // Herança
 function Animal() {
@@ -145,3 +149,44 @@ var rex = new Cachorro();
 bichano.miar(); // elemento dele
 bichano.mamar(); // herdando de mamifero
 bichano.comer(); // herdando de animal
+
+// ---------------------------------------------------------------------------------------------------------------------
+
+// herança múltipla na forma de mixin.
+
+Object.prototype.includes = function (constructor) {
+    var objeto = new constructor();
+    for (var propriedade in objeto) {
+        if (objeto.hasOwnProperty(propriedade)) {
+            this.prototype[propriedade] = objeto[propriedade];
+        }
+    }
+};
+
+function Animal() {
+    this.comer = function () {
+        console.log("Eu como");
+    };
+    this.respirar = function () {
+        console.log("Eu respiro");
+    };
+}
+
+function Peixe() {
+    this.respirar = function () {
+        console.log("Eu respiro embaixo d'água");
+    };
+}
+
+function Nadador() {
+    this.nadar = function () {
+        console.log("Eu nado");
+    }
+}
+
+Peixe.prototype = new Animal();
+Peixe.includes(Nadador);
+var peixe = new Peixe();
+peixe.nadar();
+peixe.respirar();
+peixe.comer();
